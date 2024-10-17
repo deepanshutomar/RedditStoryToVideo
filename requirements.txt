@@ -1,0 +1,7 @@
+praw==7.7.0
+pydub==0.25.1
+requests==2.31.0
+moviepy==1.0.3
+opencv-python==4.8.1.78
+Pillow==10.0.1
+python-dotenv==1.0.0
