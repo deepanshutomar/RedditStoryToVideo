@@ -86,7 +86,7 @@ reddit-story-to-video/
 
 Check out a sample video generated using this tool:
 
-https://user-images.githubusercontent.com/your-username/sample_video.mp4
+https://youtu.be/iwBzLQjRW6w
 
 > **Note**: Replace `your-username` with your GitHub username and add the link to the video hosted on your GitHub or a video-sharing platform.
 
