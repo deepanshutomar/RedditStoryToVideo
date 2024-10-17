@@ -1,63 +1,82 @@
-# RedditStoryToVideo
-Here's a sample **README.md** file for your **Reddit Story to Video Generator** project, complete with a description and placeholders for images:
+# 📖 Reddit Story to Video Generator
 
+Turn Reddit posts into engaging videos with automatic text-to-speech conversion and video generation! 🎥🚀
 
-# Reddit Story to Video Generator
+![reddit-logo](images/reddit.png)
+![video-generation](images/video_generation.png)
 
-This project automates the process of converting Reddit posts into videos. It fetches the content from a given Reddit post URL, generates audio using text-to-speech (TTS), and combines it with video frames to produce a complete video. The generated videos can be used for creating YouTube content, social media posts, or other creative projects.
+## ✨ Features
 
-## Features
+- 🔍 **Fetch Reddit Stories**: Automatically fetch stories from Reddit using a post URL.
+- 🗣 **Text-to-Speech**: Convert the post title and body into audio using high-quality voice models.
+- 🎬 **Video Creation**: Generate videos with synchronized captions from the Reddit story.
+- 🎨 **Custom Styling**: Adjust captions, fonts, and styles to make each video unique.
+- 🎶 **Background Music**: Add audio to create a fully-voiced video output.
 
-- Fetches the title and content of Reddit posts.
-- Uses Eleven Labs' API to generate realistic audio from text.
-- Converts audio and video frames into a cohesive video.
-- Supports adding captions directly onto video frames.
-- Includes text splitting for better readability and presentation.
-- Automatically adds audio to video using `moviepy`.
+## 📋 Prerequisites
 
-## Installation
+- **Python 3.8+**: Make sure Python is installed.
+- **FFmpeg**: Install FFmpeg to process audio and video.
 
-Follow these steps to set up the project:
+## 🛠 Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/your-username/reddit-story-to-video-generator.git
-   cd reddit-story-to-video-generator
+   git clone https://github.com/your-username/reddit-story-to-video.git
+   cd reddit-story-to-video
    ```
 
-2. Install the required Python packages:
+2. Install the dependencies:
+
    ```bash
-   pip install praw opencv-python torch transformers soundfile requests pydub elevenlabs python-dotenv moviepy pillow ffmpeg-python
+   pip install -r requirements.txt
    ```
 
-3. Set up your **Reddit** API credentials:
-   - Create a `.env` file and add your `client_id`, `client_secret`, and `user_agent`:
-     ```env
-     REDDIT_CLIENT_ID=your_client_id
-     REDDIT_CLIENT_SECRET=your_client_secret
-     REDDIT_USER_AGENT=your_user_agent
-     ELEVENLABS_API_KEY=your_elevenlabs_api_key
-     ```
+3. Set up your `.env` file with your API keys:
 
-## Usage
-
-1. Run the script and provide the Reddit post URL when prompted:
-   ```bash
-   python reddit_to_video.py
+   ```env
+   REDDIT_CLIENT_ID=your_client_id
+   REDDIT_CLIENT_SECRET=your_client_secret
+   ELEVENLABS_API_KEY=your_elevenlabs_api_key
    ```
 
-2. The script will:
-   - Fetch the post title and body.
-   - Generate audio files for the title and body.
-   - Combine the audio files into a single audio track.
-   - Extract frames from a sample video and add captions.
-   - Combine frames into a video with synchronized audio.
+## 🚀 Usage
 
-3. The output video will be saved as `output/final_video_with_audio.mp4`.
+1. Run the script:
 
-## Example
+   ```bash
+   python reddit_video_generator.py
+   ```
 
-Here's an example of how the output might look:
+2. Enter the Reddit post URL when prompted:
+
+   ```
+   Enter the Reddit post URL: https://www.reddit.com/r/...
+   ```
+
+3. Watch as the script fetches the post, converts the text into speech, generates a video, and combines it with the audio.
+
+4. Find your generated video in the `output/` directory! 🎉
+
+## 📂 Directory Structure
+
+```
+reddit-story-to-video/
+├── video/                # Sample video clips for background
+├── font/                 # Custom fonts for captions
+├── frames/               # Temporary directory for frames
+├── output/               # Final video output directory
+├── images/               # Images for the README
+├── .env                  # Store API keys here
+├── reddit_video_generator.py  # Main script
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
+```
+
+## 📸 Screenshots
+
+###Here's an example of how the output might look:
 
 ![Example Thumbnail](images/example_thumbnail.png)
 *Example of the generated video thumbnail.*
@@ -65,40 +84,35 @@ Here's an example of how the output might look:
 ![Frame with Caption](images/frame_with_caption.png)
 *A frame from the video showing a caption extracted from the Reddit post.*
 
-## Project Structure
+## 🎥 Video Output Example
 
-```plaintext
-reddit-story-to-video-generator/
-│
-├── reddit_to_video.py            # Main script to convert Reddit posts to videos
-├── .env                          # Stores API keys (not included in the repository)
-├── README.md                     # Project documentation
-├── video/                        # Directory containing sample video files
-│   └── sample.mp4                # Sample video to use as background
-├── font/                         # Directory for custom fonts
-│   └── Cunia.ttf                 # Font used for captions
-├── output/                       # Directory where the final video is saved
-├── images/                       # Directory for README images
-│   ├── example_thumbnail.png     # Thumbnail showing the output video
-│   └── frame_with_caption.png    # Example frame with caption overlay
-└── frames/                       # Directory for extracted frames (generated at runtime)
-```
+Check out a sample video generated using this tool:
 
-## Dependencies
+https://user-images.githubusercontent.com/your-username/sample_video.mp4
 
-- Python 3.8+
-- Libraries: `praw`, `opencv-python`, `torch`, `transformers`, `soundfile`, `requests`, `pydub`, `elevenlabs`, `python-dotenv`, `moviepy`, `pillow`, `ffmpeg-python`
+> **Note**: Replace `your-username` with your GitHub username and add the link to the video hosted on your GitHub or a video-sharing platform.
 
-## Contributing
+## 🧰 Built With
 
-Feel free to fork this repository and submit pull requests if you want to improve the project. Make sure to adhere to the contribution guidelines and code of conduct.
+- **Python** 🐍
+- **PRAW** for Reddit API integration
+- **MoviePy** for video editing
+- **PIL/Pillow** for image manipulation
+- **OpenCV** for frame extraction and processing
 
-## License
+## 🌟 Contributing
+
+Feel free to fork this project, create a new branch, and submit a pull request. Contributions are always welcome! 😊
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgements
+
+- Reddit API for providing access to Reddit posts.
+- ElevenLabs for the high-quality text-to-speech services.
 
 ## Contact
 
 If you have any questions or suggestions, feel free to reach out at <a href="https://www.instagram.com/deepanshutomarg">Instagram</a>.
-
-```
