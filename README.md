@@ -2,8 +2,6 @@
 
 Turn Reddit posts into engaging videos with automatic text-to-speech conversion and video generation! 🎥🚀
 
-![reddit-logo](images/reddit.png)
-![video-generation](images/video_generation.png)
 
 ## ✨ Features
 
