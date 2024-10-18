@@ -16,6 +16,8 @@ Turn Reddit posts into engaging videos with automatic text-to-speech conversion 
 - **Python 3.8+**: Make sure Python is installed.
 - **FFmpeg**: Install FFmpeg to process audio and video.
 
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_fLY8FnunRVF_078qe_shTZ5a20bhME-?usp=sharing])
+
 ## 🛠 Installation
 
 1. Clone the repository:
